@@ -1,1 +1,12 @@
-<app-header></app-header>
+<app-header (toggleSideBar)="toggleSideBar()"></app-header>
+<div class="w-full h-[calc(100vh-57px)] flex mt-1 gap-x-1 ">
+
+ @if(showSideBar){
+ <app-sidebar @slideLeftInOut></app-sidebar>
+ }
+
+ <div class="flex-1 h-full text-white p-2 default-border">
+  <router-outlet></router-outlet>
+ </div>
+
+</div>

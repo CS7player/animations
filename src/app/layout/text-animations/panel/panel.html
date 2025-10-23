@@ -1,0 +1,7 @@
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 p-2">
+ @for(card of textAnimationsList;track $index){
+ <div class="col-span-1 default-card" (click)="naviageTo(card)">
+  {{card['title']}}
+ </div>
+ }
+</div>
