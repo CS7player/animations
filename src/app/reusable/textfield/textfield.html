@@ -9,7 +9,7 @@
   (input)="onInputChange($event)" [placeholder]="placeholder" class="custom-input-field">
  @if(showInfo){
  <div class="relative">
-  <i class="fa-solid fa-circle-info info-icon" (mouseenter)="isHover = true" (mouseleave)="isHover = false"></i>
+  <i [class]="isError? wrongIcon : infoIcon " (mouseenter)="isHover = true" (mouseleave)="isHover = false"></i>
   @if(isHover){
   <div class="tooltip-info">
    {{infoContent}}

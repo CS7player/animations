@@ -1,8 +1,19 @@
-<div class=" w-full h-full flex flex-col gap-y-2">
- <app-textfield label="Sample Text" placeholder="Enter the Text" [(elementValue)]="sampleText" [showInfo]="true"
-  [required]="true" [infoContent]="'toolt'">
- </app-textfield>
- <div class="w-full h-full border-2 border-amber-50 rounded-lg">
+<div class="w-full h-full flex flex-col gap-y-2">
+ <div class="w-full flex flex-row gap-x-1">
+  <app-textfield label="Sample Text" placeholder="Enter the Text" [(elementValue)]="sampleText" [showInfo]="true"
+   [required]="true" [infoContent]="'Enter the text which will reflect in the animations'">
+  </app-textfield>
+  <app-textfield label="Animation Duration" placeholder="Enter the Seconds" [(elementValue)]="totalAnimationTime"
+   [showInfo]="true" [required]="true" [infoContent]="'Enter the value in seconds'">
+  </app-textfield>
+ </div>
 
+ <div class="w-full h-full border-2 border-amber-50 rounded-lg flex items-center justify-center">
+  <h1 class="text-5xl font-bold flex space-x-1">
+   @for(letter of sampleText;track $index;let i = $index){
+   <span class="bounce-letter" [style.animation-duration]="totalAnimationTime+'s'"
+    [style.animation-delay]="i * letterDelay + 's'">{{letter}}</span>
+   }
+  </h1>
  </div>
 </div>
