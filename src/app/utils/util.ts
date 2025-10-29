@@ -6,10 +6,6 @@ import { Injectable } from '@angular/core';
 export class Util {
 
  /*..RegExp..*/
- static wholeNumberRegex = new RegExp(/^\d+$/);
+ static readonly wholeNumberRegex = new RegExp(/^\d+$/);
 
-
- static isNumber(value: any) {
-  return typeof value === 'number' && !isNaN(value);
- }
 }

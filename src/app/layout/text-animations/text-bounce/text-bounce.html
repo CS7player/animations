@@ -4,12 +4,12 @@
    [required]="true" [infoContent]="'Enter the text which will reflect in the animations'">
   </app-textfield>
   <app-textfield label="Animation Duration" placeholder="Enter the Seconds" [(elementValue)]="totalAnimationTime"
-   [showInfo]="true" [required]="true" [infoContent]="'Enter the value in seconds'">
+   [showInfo]="true" [required]="true" [regExp]="numberExpression" [infoContent]="'Enter the value in seconds'">
   </app-textfield>
  </div>
 
  <div class="w-full h-full border-2 border-amber-50 rounded-lg flex items-center justify-center">
-  <h1 class="text-5xl font-bold flex space-x-1">
+  <h1 class="text-7xl font-bold flex space-x-1">
    @for(letter of sampleText;track $index;let i = $index){
    <span class="bounce-letter" [style.animation-duration]="totalAnimationTime+'s'"
     [style.animation-delay]="i * letterDelay + 's'">{{letter}}</span>

@@ -19,7 +19,7 @@ export class Textfield {
  @Input() readonly: boolean = false;
  @Input() disabled: boolean = false;
  @Input() required: boolean = false;
- @Input() regExp: RegExp = new RegExp("");
+ @Input() regExp: RegExp = new RegExp(".*");
  @Input() isError: boolean = false;
  infoIcon: string = "fa-solid fa-circle-info info-icon";
  wrongIcon: string = "fa-solid fa-circle-exclamation fa-beat cross-icon";
@@ -29,10 +29,11 @@ export class Textfield {
   const input = event.target as HTMLInputElement
   this.elementValue = input.value
   this.elementValueChange.emit(this.elementValue)
+  this.isMatch()
  }
 
- isMatch()  {
-   this.isError = this.regExp.test(this.elementValue) ? false : true;
+ isMatch() {
+  this.isError = this.regExp.test(this.elementValue) ? false : true;
  }
 
  onChange: (value: any) => void = () => { }

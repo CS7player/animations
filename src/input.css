@@ -30,7 +30,7 @@
 }
 
 .tooltip-info {
-  @apply absolute top-full right-0 mt-1 w-40 p-2 border-2 border-green-500 rounded-lg text-white bg-black text-sm z-50;
+  @apply absolute top-full right-0 mt-1 w-40 p-2 border-2 border-green-500 rounded-lg  text-sm z-50;
 }
 
 @keyframes bounceLetter {

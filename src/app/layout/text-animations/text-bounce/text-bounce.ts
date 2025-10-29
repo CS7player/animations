@@ -10,7 +10,7 @@ export class TextBounce implements OnInit {
 
  sampleText: string = "Bounce";
  totalAnimationTime: any = 2;
- isNumber: boolean = Util.isNumber(this.totalAnimationTime);
+ numberExpression = Util.wholeNumberRegex;
  letterDelay: number = 0;
  ngOnInit(): void {
   this.letterDelay = Number((this.totalAnimationTime / this.sampleText.length).toFixed(2));
