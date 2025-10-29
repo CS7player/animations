@@ -6,8 +6,6 @@ export const textRoutes: Routes = [
   path: "",
   component: TextAnimations,
   children: [
-   { path: "", redirectTo: "panel", pathMatch: "full" },
-   { path: "panel", loadComponent: () => import("./panel/panel").then((c) => c.Panel) },
    { path: "bounce", loadComponent: () => import("./text-bounce/text-bounce").then((c) => c.TextBounce) },
    { path: "swing", loadComponent: () => import("./text-swing/text-swing").then((c) => c.TextSwing) },
    { path: "random", loadComponent: () => import("./text-random/text-random").then((c) => c.TextRandom) },

@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Textfield } from '../../../reusable/textfield/textfield';
 import { Util } from '../../../utils/util';
 @Component({
@@ -10,8 +10,9 @@ export class TextBounce implements OnInit {
 
  sampleText: string = "Bounce";
  totalAnimationTime: any = 2;
- numberExpression = Util.wholeNumberRegex;
+ numberExpression = Util.decimalNumberRegex;
  letterDelay: number = 0;
+
  ngOnInit(): void {
   this.letterDelay = Number((this.totalAnimationTime / this.sampleText.length).toFixed(2));
  }

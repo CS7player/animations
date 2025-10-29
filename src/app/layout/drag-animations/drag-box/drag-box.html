@@ -1,0 +1,7 @@
+<div class="w-full h-full relative">
+
+ <div
+  class="box absolute default-border w-17 h-17 rounded-xl cursor-grab active:cursor-grabbing transition-transform duration-100 {{isDragging? 'bg-green-500':''}}"
+  (mousedown)="startDrag($event)" (document:mousemove)="onDrag($event)" (document:mouseup)="stopDrag()"></div>
+
+</div>

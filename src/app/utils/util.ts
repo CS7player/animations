@@ -7,5 +7,6 @@ export class Util {
 
  /*..RegExp..*/
  static readonly wholeNumberRegex = new RegExp(/^\d+$/);
+ static readonly decimalNumberRegex = new RegExp(/^\d*\.?\d+$/);
 
 }
