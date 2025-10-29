@@ -1,1 +1,18 @@
-<p>dialog-box works!</p>
+<dialog id="myDialog" class="relative backdrop:bg-black/50 p-1
+         open:flex open:flex-col open:items-center open:justify-center
+         transition-transform duration-300 ease-out scale-95 open:scale-100
+         inset-0 m-auto bg-black/90 default-border overflow-visible">
+
+ <span class="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 
+           bg-white text-black px-0.5 rounded-full shadow cursor-pointer
+           hover:bg-red-400 transition" (click)="closeDialog()">
+  <i class="fa-solid fa-xmark"></i>
+ </span>
+ <div class="{{bgClass}} text-black p-2 text-xl">
+  <p>
+   {{ contentObj?.contentText || 'This dialog no words.' }}
+  </p>
+ </div>
+
+
+</dialog>

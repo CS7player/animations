@@ -1,0 +1,37 @@
+<div class="w-full h-full grid place-items-center grid-flow-col justify-between ">
+
+ <div>
+  <p>Even Numbers</p>
+  <div class="w-fit min-w-17 min-h-17 default-border grid grid-cols-2 gap-1 p-1" (drop)="onDrop('even')"
+   (dragover)="onDragOver($event)">
+   @for(number of evenList;track $index){
+   <div class="drag-box-not-abs madhyalo" draggable="true" (dragstart)="onDragStart(number)">{{number}}</div>
+   }
+  </div>
+ </div>
+
+ <div>
+  <p>Numbers</p>
+  <div class="w-fit min-w-17 min-h-17 default-border grid grid-cols-4 gap-1 p-1" (drop)="onDrop('list')"
+   (dragover)="onDragOver($event)">
+   @for(number of numberList;track $index){
+   <div class="drag-box-not-abs madhyalo" draggable="true" (dragstart)="onDragStart(number)">{{number}}</div>
+   }
+  </div>
+ </div>
+
+ <div>
+  <p>Odd Numbers</p>
+  <div class="w-fit min-w-17 min-h-17 default-border grid grid-cols-2 gap-1 p-1" (drop)="onDrop('odd')"
+   (dragover)="onDragOver($event)">
+   @for(number of oddList;track $index){
+   <div class="drag-box-not-abs madhyalo" draggable="true" (dragstart)="onDragStart(number)">{{number}}</div>
+   }
+  </div>
+
+ </div>
+</div>
+
+@if(showError){
+<app-dialog-box [contentObj]="contentObj" (close)="showError = $event"></app-dialog-box>
+}

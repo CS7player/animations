@@ -16,6 +16,26 @@
   @apply border-2 border-green-500 rounded-lg text-white text-xl p-2 hover:font-extrabold hover:scale-105 transition-transform duration-300;
 }
 
+.madhyalo {
+  @apply flex justify-center items-center;
+}
+
+.drag-box {
+  @apply w-17 h-17 absolute rounded-lg border-2 border-green-500;
+}
+
+.drag-box-not-abs {
+  @apply w-17 h-17 rounded-lg border-2 border-green-500;
+}
+
+.drag-grid-box {
+  @apply w-17 h-17 border-1 border-green-500;
+}
+
+.drag-block-bg {
+  @apply bg-[repeating-linear-gradient(45deg,#93c47d_0px,#93c47d_2px,transparent_2px,transparent_10px)];
+}
+
 /*custom components*/
 .custom-input-field {
   @apply text-green-300 placeholder-green-100 font-extrabold border-b-2 border-transparent focus:border-amber-200 outline-none transition-colors duration-200;

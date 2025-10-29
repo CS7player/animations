@@ -1,1 +1,21 @@
-<p>drag-fixed works!</p>
+<div class="w-full h-full flex flex-col gap-y-2">
+ <div class="w-full flex flex-row gap-x-1">
+  <app-textfield label="Block Grid" placeholder="Enter grid indexes" [(elementValue)]="blockList" [showInfo]="true"
+   [required]="true" [regExp]="gridBoxExpression" [infoContent]="'Enter the value grid index using , from 0 to 15'">
+  </app-textfield>
+ </div>
+
+ <div class="w-full h-full relative madhyalo border-2 border-amber-50 rounded-lg">
+  <div class="grid grid-cols-4 w-fit default-border relative" #grid>
+   @for(box of box_list; track $index; let i = $index) {
+   <div class="drag-grid-box madhyalo relative {{ isBlock(i) ? 'drag-block-bg' : '' }}" [attr.data-index]="i">
+    @if(i == 0) {
+    <div class="z-10 box w-5 h-5 rounded-full border-2 absolute border-green-500 {{isDragging ? 'bg-green-500' : ''}}"
+     (mousedown)="startDrag($event)" (document:mousemove)="onDrag($event)" (document:mouseup)="stopDrag()">
+    </div>
+    }
+   </div>
+   }
+  </div>
+ </div>
+</div>

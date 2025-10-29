@@ -7,8 +7,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 
 export class DragBox {
- 
- @ViewChild('box', { static: false }) boxRef!: ElementRef;
+
+ @ViewChild('drag-box', { static: false }) boxRef!: ElementRef;
  isDragging = false;
  offsetX = 0;
  offsetY = 0;
