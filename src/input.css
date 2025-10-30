@@ -36,6 +36,10 @@
   @apply bg-[repeating-linear-gradient(45deg,#93c47d_0px,#93c47d_2px,transparent_2px,transparent_10px)];
 }
 
+.keyboard-button {
+  @apply h-14 flex justify-center items-center text-xl rounded-lg text-green-300 border-2 border-green-500 hover:bg-green-300 hover:text-black;
+}
+
 /*custom components*/
 .custom-input-field {
   @apply text-green-300 placeholder-green-100 font-extrabold border-b-2 border-transparent focus:border-amber-200 outline-none transition-colors duration-200;

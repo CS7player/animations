@@ -1,0 +1,44 @@
+<div class="w-full h-full madhyalo">
+
+ <div class="flex flex-col gap-y-1 p-1 default-border">
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of first_line;track $index){
+   <p class="keyboard-button w-14" [innerHTML]="key"></p>
+   }
+  </div>
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of second_line;track $index){
+   <p class="keyboard-button {{$index==13?'w-44':'w-14'}}" [innerHTML]="key"></p>
+   }
+  </div>
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of third_line;track $index;let i = $index){
+   <p class="keyboard-button {{[0,13].includes(i)?'w-29':'w-14'}}" [innerHTML]="key"></p>
+   }
+  </div>
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of forth_line;track $index;let i= $index){
+   <p class="keyboard-button {{[0,12].includes(i)?'w-36.5':'w-14'}}" [innerHTML]="key"></p>
+   }
+  </div>
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of fifth_line;track $index;let i = $index){
+   <p class="keyboard-button {{[0,11].includes(i)?'w-36.5':'w-14'}}" [innerHTML]="key"></p>
+   }
+  </div>
+
+  <div class="flex flex-row gap-x-1">
+   @for(key of sixth_line;track $index;let i = $index){
+   <p class="keyboard-button {{[3].includes(i)?'w-105':'w-14'}}" [ngClass]="{ 'w-[5.2rem]': key === 'Ctrl' }"
+    [innerHTML]="key"></p>
+   }
+  </div>
+
+ </div>
+
+</div>
